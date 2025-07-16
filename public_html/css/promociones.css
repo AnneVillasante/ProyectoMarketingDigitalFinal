@@ -1,0 +1,252 @@
+/* Estilos generales de la sección Promociones */
+.seccion-promociones {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.seccion-promociones h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.descripcion-promociones {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Banner Animado */
+.banner-animado {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-animado:hover {
+    transform: scale(1.02);
+}
+
+.banner-animado img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.7); /* Oscurece la imagen para que el texto resalte */
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 229, 190, 0.7), rgba(0, 102, 255, 0.7)); /* Mezcla de colores de tu paleta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.banner-animado:hover .banner-overlay {
+    opacity: 1;
+}
+
+.banner-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-overlay p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Área de Promociones y Botón */
+.area-promociones {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.boton-principal {
+    background-color: #0066FF; /* Azul de tu paleta */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.boton-principal:hover {
+    background-color: #004aad; /* Un azul más oscuro */
+}
+
+/* Grid de Promociones */
+.grid-promociones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.promocion-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    padding: 25px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent; /* Para el highlight */
+}
+
+.promocion-item.destacada {
+    border-color: #00E5BE; /* Verde de tu paleta para destacar */
+    box-shadow: 0 8px 25px rgba(0, 229, 190, 0.4);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.promocion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.promocion-item h3 {
+    color: #0066FF; /* Azul de tu paleta */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.promocion-item p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.promocion-item .precio-promo {
+    font-size: 2.2rem;
+    color: #00E5BE; /* Verde de tu paleta */
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.promocion-item .duracion-promo {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.promocion-item .boton-promo {
+    display: inline-block;
+    background-color: #00E5BE; /* Verde de tu paleta */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.promocion-item .boton-promo:hover {
+    background-color: #00c4a4;
+}
+
+/* CTA Suscripción */
+.cta-promocion {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #e7f7ff; /* Fondo claro para el CTA */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.cta-promocion p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta-promocion .boton-cta {
+    background-color: #0066FF; /* Azul de tu paleta */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-promocion .boton-cta:hover {
+    background-color: #004aad;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .seccion-promociones h1 {
+        font-size: 2.2rem;
+    }
+
+    .descripcion-promociones,
+    .cta-promocion p {
+        font-size: 1rem;
+    }
+
+    .banner-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .banner-overlay p {
+        font-size: 1.1rem;
+    }
+
+    .grid-promociones {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .banner-overlay p {
+        font-size: 1rem;
+    }
+
+    .promocion-item {
+        padding: 20px;
+    }
+
+    .promocion-item h3 {
+        font-size: 1.6rem;
+    }
+}

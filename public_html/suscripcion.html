@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/suscripcion.css">
+        <title>Formulario de Suscripción</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <marquee behavior="scroll" direction="left" scrollamount="6" bgcolor="#00E5BE" style="color: white; padding: 10px 0; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+          🚀 Transformamos tu presencia digital | 💡 Estrategias innovadoras | 📱 Marketing que genera resultados | ⭐ Expertos en redes sociales | 🎯 Soluciones personalizadas | 💼 Potenciamos tu marca | 📈 Crecimiento garantizado | 🌟 Tu éxito es nuestra prioridad
+        </marquee>
+        <header class="encabezado">
+            <div class="contenedor">
+                <div class="logo">
+                    <a href="/ProyectoMarketingDigital/">
+                    <img
+                      src="imagenes/logo2.svg"
+                      alt="AM Digital - Agencia de Marketing"
+                    />
+                    </a>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+                <nav class="navegacion">
+                    <ul>
+                        <li><a href="/ProyectoMarketingDigital/">Inicio</a></li>
+                        <li><a href="/ProyectoMarketingDigital/nosotros.html">Nosotros</a></li>
+                        <li><a href="/ProyectoMarketingDigital/equipo.html">Equipo</a></li>
+                        <li><a href="/ProyectoMarketingDigital/soluciones.html">Soluciones</a></li>
+                        <li><a href="/ProyectoMarketingDigital/disenoweb.html">Diseño Web</a></li>
+                        <li><a href="/ProyectoMarketingDigital/precios.html">Precios</a></li>
+                        <li class="submenu">
+                          <a href="/ProyectoMarketingDigital/portafolio.html">Portafolio</a>
+                          <ul class="submenu-lista">
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#web">Web</a></li>
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#branding">Branding</a></li>
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#social">Social Media</a></li>
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#video">Video</a></li>
+                          </ul>
+                        </li>
+                        <li class ="submenu">
+                                        <a>Contacto</a>
+                                        <ul class="submenu-lista">
+                                        <li><a href="/ProyectoMarketingDigital/contactanos.html">Contáctanos</a></li>
+                                        <li><a href="/ProyectoMarketingDigital/faq.html">FAQ</a></li>
+                                        <li><a href="/ProyectoMarketingDigital/promociones.html">Promociones</a></li>
+                                        </ul>
+                                    </li>
+                        <li class ="submenu">
+                                        <a>Clientes</a>
+                                        <ul class="submenu-lista">
+                                        <li><a href="/ProyectoMarketingDigital/usuario.html">Panel de Usuario</a></li>
+                                        <li><a href="/ProyectoMarketingDigital/suscripcion.html">Suscripción</a></li>
+                                        </ul>
+                                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+    <main class="contenido-principal">
+        <div class="contenedor">
+            <section class="seccion-newsletter">
+                <h1 class="titulo-seccion">Suscríbete a nuestro Newsletter</h1>
+                <p class="descripcion">Recibe tips de marketing, promociones exclusivas y reportes mensuales directamente en tu correo.</p>
+                
+                <div class="contenedor-formulario">
+                    <form id="formulario-newsletter" class="formulario-newsletter">
+                        <div class="grupo-formulario">
+                            <label for="nombre">Nombre completo*</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <span class="mensaje-error" id="error-nombre"></span>
+                        </div>
+                        
+                        <div class="grupo-formulario">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="mensaje-error" id="error-email"></span>
+                        </div>
+                        
+                        <div class="grupo-formulario">
+                            <label>Temas de interés* (selecciona al menos uno)</label>
+                            <div class="grupo-checkbox">
+                                <label><input type="checkbox" name="temas" value="SEO"> SEO (Optimización para motores de búsqueda)</label>
+                                <label><input type="checkbox" name="temas" value="Ads"> Publicidad Digital (Ads)</label>
+                                <label><input type="checkbox" name="temas" value="Redes"> Redes Sociales</label>
+                            </div>
+                            <span class="mensaje-error" id="error-temas"></span>
+                        </div>
+                        
+                        <div class="grupo-formulario">
+                            <label for="pais">País*</label>
+                            <select id="pais" name="pais" required>
+                                <option value="">Selecciona tu país</option>
+                                <option value="Perú">Perú</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="México">México</option>
+                                <option value="España">España</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                            <span class="mensaje-error" id="error-pais"></span>
+                        </div>
+                        
+                        <div class="grupo-formulario">
+                            <label for="comentarios">Comentarios (opcional)</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" placeholder="¿Qué temas te interesan más?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="boton-suscribir">Suscribirse</button>
+                    </form>
+                    
+                    <div id="resultado-suscripcion" class="resultado-suscripcion"></div>
+                </div>
+                
+                <div class="cta-servicios">
+                    <h3>¿Necesitas ayuda profesional con tu marketing digital?</h3>
+                    <p>Descubre cómo nuestros servicios pueden impulsar tu negocio.</p>
+                    <a href="/ProyectoMarketingDigital/soluciones.html" class="boton-cta">Ver Servicios</a>
+                </div>
+            </section>
+            
+            <button id="btn-estadisticas" class="boton-estadisticas">Ver Estadísticas</button>
+        </div>
+    </main>
+
+    <!-- Ventana modal de estadísticas -->
+    <div id="ventana-estadisticas" class="ventana-estadisticas">
+        <div class="contenido-ventana">
+            <button id="cerrar-estadisticas" class="cerrar-ventana">&times;</button>
+            <h2>Estadísticas de Suscriptores</h2>
+            <div id="contenido-estadisticas"></div>
+        </div>
+    </div>
+    
+    <footer class="pie-pagina">
+            <div class="contenedor">
+                <div class="grid-pie">
+                    <div class="col-footer info-pie">
+                        <h4>Visítanos</h4>
+                        <p> Tacna y Arica 160,<br>Arequipa - Perú</p>
+                        <div class="redes-sociales">
+                            <a href="#">Fb.</a>
+                            <a href="#">Ig.</a>
+                        </div>
+                    </div>
+                    <div class="col-footer contacto-pie">
+                        <h4>Hablemos</h4>
+                        <p>+51 999 999 999<br>(054) 64 64 64</p>
+                        <a href="mailto:contacto@PLUMADIGITALmarketing.pe">contacto@PLUMADIGITALmarketing.pe</a>
+                    </div>
+                    <div class="col-footer politicas-pie ultima-columna">
+                        <h4>Política y Ética</h4>
+                        <ul>
+                            <li><a href="#">Política de Calidad</a></li>
+                            <li><a href="#">Política Antisoborno</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pie-inferior">
+                    <p>© 2025 PLUMADIGITAL - Agencia de Marketing Digital en Arequipa</p>
+                </div>
+            </div>
+        </footer>
+    <script src="js/suscripcion.js"></script>
+    </body>
+</html>
