@@ -1,0 +1,251 @@
+/* Estilos generales de la sección FAQ */
+.seccion-faq {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.seccion-faq h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.descripcion-faq {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos del Acordeón */
+.acordeon {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.item-faq {
+    border-bottom: 1px solid #eee;
+}
+
+.item-faq:last-child {
+    border-bottom: none;
+}
+
+.pregunta-faq {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    padding: 20px 25px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.pregunta-faq:hover {
+    background-color: #f1f1f1;
+}
+
+.pregunta-faq.activo {
+    background-color: #e0f7f3; /* Color más claro en la paleta de verdes/azules */
+    color: #004aad; /* Color azul de la paleta */
+}
+
+.icono-acordeon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.pregunta-faq.activo .icono-acordeon {
+    transform: rotate(45deg); /* Cambia de '+' a 'x' o a una flecha */
+    color: #00E5BE;
+}
+
+.respuesta-faq {
+    padding: 0 25px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.respuesta-faq.mostrar {
+    max-height: 200px; /* Ajustar según el contenido máximo esperado */
+    padding: 20px 25px;
+}
+
+.respuesta-faq p {
+    margin: 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* CTA Contacto Soporte */
+.cta-soporte {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #e7f7ff; /* Fondo claro para el CTA */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.cta-soporte p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta-soporte .boton-cta {
+    background-color: #0066FF; /* Azul de tu paleta */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none; /* Asegura que el botón no tenga borde */
+    cursor: pointer; /* Indica que es clickeable */
+    font-size: 1rem;
+}
+
+.cta-soporte .boton-cta:hover {
+    background-color: #004aad; /* Un azul más oscuro al pasar el ratón */
+}
+
+
+/* Estilos del Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Permanece fijo en la pantalla */
+    z-index: 1002; /* Por encima de todo, incluyendo la marquesina */
+    left: 0;
+    top: 0;
+    width: 100%; /* Cubre todo el ancho */
+    height: 100%; /* Cubre toda la altura */
+    overflow: auto; /* Habilita el scroll si el contenido es demasiado grande */
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente oscuro */
+    display: flex; /* Para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    position: relative;
+    animation: zoomIn 0.3s ease-out; /* Animación de entrada */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-contenido h2 {
+    text-align: center;
+    color: #0066FF; /* Azul de tu paleta */
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo textarea {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-grupo input[type="text"]:focus,
+.form-grupo input[type="email"]:focus,
+.form-grupo textarea:focus {
+    border-color: #00E5BE; /* Verde de tu paleta */
+    box-shadow: 0 0 5px rgba(0, 229, 190, 0.4);
+    outline: none;
+}
+
+.boton-enviar {
+    background-color: #00E5BE; /* Verde de tu paleta */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #00c4a4; /* Un verde más oscuro al pasar el ratón */
+}
+
+/* Responsive para el modal */
+@media (max-width: 600px) {
+    .modal-contenido {
+        width: 95%;
+        padding: 20px;
+    }
+}
