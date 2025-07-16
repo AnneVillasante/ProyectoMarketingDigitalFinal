@@ -1,0 +1,332 @@
+/* Estilos para la sección principal */
+main {
+    padding-top: 120px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* Sección de equipo */
+.equipo-seccion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.equipo-seccion h3 {
+    color: #00E5BE;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.equipo-seccion h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+/* Tarjetas de miembros del equipo */
+.miembro-equipo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+/* Por defecto, imagen a la derecha */
+.equipo-imagen {
+    order: 2;
+}
+
+.equipo-descripcion {
+    order: 1;
+    padding: 0 30px;
+    text-align: left;
+}
+
+/* Para miembros impares (2do, 4to, etc), imagen a la izquierda */
+.miembro-equipo:nth-child(odd) .equipo-imagen {
+    order: 1;
+}
+
+.miembro-equipo:nth-child(odd) .equipo-descripcion {
+    order: 2;
+}
+
+.equipo-descripcion h4 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.equipo-descripcion h5 {
+    color: #00E5BE;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.equipo-descripcion p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.equipo-imagen img {
+    height: 450px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sección de empresa */
+.empresa-seccion {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.empresa-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+.empresa-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Por defecto, imagen a la derecha */
+.empresa-item .empresa-imagen {
+    order: 2;
+}
+
+.empresa-item .empresa-texto {
+    order: 1;
+    padding: 0 30px;
+}
+
+/* Para items pares, imagen a la izquierda */
+.empresa-item:nth-child(even) .empresa-imagen {
+    order: 1;
+}
+
+.empresa-item:nth-child(even) .empresa-texto {
+    order: 2;
+}
+
+.empresa-texto h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.empresa-texto p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.empresa-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sección descripción MPV */
+.descripcion-mpv {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.descripcion-mpv p {
+    color: #00E5BE;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.descripcion-mpv h2 {
+    color: #333;
+    font-size: 2.5rem;
+    line-height: 1.3;
+}
+
+/* Sección de clientes */
+.clientes-seccion {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.clientes-seccion p {
+    color: #00E5BE;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.clientes-seccion h3 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.clientes-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.cliente-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+}
+
+.cliente-item img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .empresa-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 960px) {
+    .miembro-equipo {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .equipo-descripcion,
+    .miembro-equipo:nth-child(odd) .equipo-descripcion {
+        padding: 0 20px;
+        order: 2;
+        text-align: center;
+    }
+
+    .equipo-imagen,
+    .miembro-equipo:nth-child(odd) .equipo-imagen {
+        order: 1;
+    }
+
+    .descripcion-mpv {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .empresa-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .empresa-item .empresa-texto,
+    .empresa-item:nth-child(even) .empresa-texto {
+        order: 2;
+        padding: 0 20px;
+    }
+
+    .empresa-item .empresa-imagen,
+    .empresa-item:nth-child(even) .empresa-imagen {
+        order: 1;
+    }
+
+    .empresa-imagen img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .empresa-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .equipo-seccion h2,
+    .descripcion-mpv h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        gap: 20px;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .cliente-item {
+        padding: 20px;
+    }
+
+    .cliente-item img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .clientes-seccion h3 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .equipo-descripcion h4 {
+        font-size: 1.5rem;
+    }
+
+    .empresa-contenedor {
+        gap: 40px;
+    }
+
+    .empresa-texto h3 {
+        font-size: 1.5rem;
+    }
+
+    .empresa-imagen img {
+        height: 250px;
+    }
+} 
