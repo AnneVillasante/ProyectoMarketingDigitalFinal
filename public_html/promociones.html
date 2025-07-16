@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones - AM Digital Marketing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/promociones.css">
+</head>
+<body>
+    <marquee id="marqueeDinamica" behavior="scroll" direction="left" scrollamount="6" bgcolor="#00E5BE" style="color: white; padding: 10px 0; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+      🚀 ¡Nuevas promociones cada mes! Mantente atento a nuestras ofertas especiales.
+    </marquee>
+
+    <header class="encabezado">
+        <div class="contenedor">
+            <div class="logo">
+                <a href="/ProyectoMarketingDigital/">
+                    <img src="imagenes/logo2.svg" alt="AM Digital - Agencia de Marketing">
+                </a>
+            </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="/ProyectoMarketingDigital/">Inicio</a></li>
+                    <li><a href="/ProyectoMarketingDigital/nosotros.html">Nosotros</a></li>
+                    <li><a href="/ProyectoMarketingDigital/soluciones.html">Soluciones</a></li>
+                    <li><a href="/ProyectoMarketingDigital/diseno-web.html">Diseño Web</a></li>
+                    <li><a href="/ProyectoMarketingDigital/precios.html">Precios</a></li>
+                    <li><a href="/ProyectoMarketingDigital/portafolio.html">Portafolio</a></li>
+                    <li class ="submenu">
+                            <a>Contacto</a>
+                            <ul class="submenu-lista">
+                            <li><a href="/ProyectoMarketingDigital/contactanos.html">Contáctanos</a></li>
+                            <li><a href="/ProyectoMarketingDigital/faq.html">FAQ</a></li>
+                            <li><a href="/ProyectoMarketingDigital/promociones.html" class="activo">Promociones</a></li>
+                            </ul>
+                        </li>
+                    <li class ="submenu">
+                            <a>Clientes</a>
+                            <ul class="submenu-lista">
+                            <li><a href="/ProyectoMarketingDigital/usuario.html">Panel de Usuario</a></li>
+                            <li><a href="/ProyectoMarketingDigital/suscripcion.html">Suscripción</a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenido-principal">
+        <section class="seccion-promociones">
+            <div class="contenedor">
+                <h1>Nuestras Promociones</h1>
+                <p class="descripcion-promociones">Aprovecha nuestras ofertas especiales en servicios de marketing digital.</p>
+
+                <div class="banner-animado">
+                    <img src="imagenes/010-promociones/banner-promociones.png" alt="Banner de Promociones">
+                    <div class="banner-overlay">
+                        <h2>¡Oferta Exclusiva!</h2>
+                        <p><a href="contactanos.html">Diseño Web Profesional con 20% de Descuento este mes.</a></p>
+                    </div>
+                </div>
+
+                <div class="area-promociones">
+                    <button id="btnVerPromociones" class="boton-principal">Ver Todas las Promociones</button>
+                    <div id="listaPromociones" class="grid-promociones">
+                        </div>
+                </div>
+
+                <div class="cta-promocion">
+                    <p>¿Te interesan nuestras ofertas? ¡Suscríbete y no te pierdas ninguna!</p>
+                    <button id="btnSuscribirse" class="boton-cta">Suscribirme a Promociones</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <div class="grid-pie">
+          <div class="col-footer info-pie">
+            <h4>Visítanos</h4>
+            <p>Tacna y Arica 160,<br />Arequipa - Perú</p>
+            <div class="redes-sociales">
+              <a href="#">Fb.</a>
+              <a href="#">Ig.</a>
+            </div>
+          </div>
+          <div class="col-footer contacto-pie">
+            <h4>Hablemos</h4>
+            <p>+51 999 999 999<br />(054) 64 64 64</p>
+            <a href="mailto:contacto@PLUMADIGITALmarketing.pe"
+              >contacto@PLUMADIGITALmarketing.pe</a
+            >
+          </div>
+          <div class="col-footer politicas-pie ultima-columna">
+            <h4>Política y Ética</h4>
+            <ul>
+              <li><a href="#">Política de Calidad</a></li>
+              <li><a href="#">Política Antisoborno</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>© 2025 PLUMADIGITAL - Agencia de Marketing Digital en Arequipa</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/menu-mobile.js" defer></script>
+    <script src="js/promociones.js" defer></script>
+</body>
+</html>
