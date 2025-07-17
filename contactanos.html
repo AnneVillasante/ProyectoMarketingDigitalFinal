@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contáctanos - AM Digital Marketing</title>
+    <link rel="stylesheet" href="css/contactanos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <marquee behavior="scroll" direction="left" scrollamount="6" bgcolor="#00E5BE" style="color: white; padding: 10px 0; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+      🚀 Transformamos tu presencia digital | 💡 Estrategias innovadoras | 📱 Marketing que genera resultados | ⭐ Expertos en redes sociales | 🎯 Soluciones personalizadas | 💼 Potenciamos tu marca | 📈 Crecimiento garantizado | 🌟 Tu éxito es nuestra prioridad
+    </marquee>
+    <header class="encabezado">
+      <div class="contenedor">
+        <div class="logo">
+          <a href="/ProyectoMarketingDigital/">
+            <img
+              src="imagenes/logo2.svg"
+              alt="AM Digital - Agencia de Marketing"
+            />
+          </a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="/ProyectoMarketingDigital/">Inicio</a></li>
+            <li><a href="/ProyectoMarketingDigital/nosotros.html">Nosotros</a></li>
+            <li><a href="/ProyectoMarketingDigital/equipo.html">Equipo</a></li>
+            <li><a href="/ProyectoMarketingDigital/soluciones.html">Soluciones</a></li>
+            <li><a href="/ProyectoMarketingDigital/disenoweb.html">Diseño Web</a></li>
+            <li><a href="/ProyectoMarketingDigital/precios.html">Precios</a></li>
+            <li class="submenu">
+              <a href="/ProyectoMarketingDigital/portafolio.html">Portafolio</a>
+              <ul class="submenu-lista">
+                <li><a href="/ProyectoMarketingDigital/portafolio.html#web">Web</a></li>
+                <li><a href="/ProyectoMarketingDigital/portafolio.html#branding">Branding</a></li>
+                <li><a href="/ProyectoMarketingDigital/portafolio.html#social">Social Media</a></li>
+                <li><a href="/ProyectoMarketingDigital/portafolio.html#video">Video</a></li>
+              </ul>
+            </li>
+            <li class ="submenu">
+                            <a>Contacto</a>
+                            <ul class="submenu-lista">
+                            <li><a href="/ProyectoMarketingDigital/contactanos.html">Contáctanos</a></li>
+                            <li><a href="/ProyectoMarketingDigital/faq.html">FAQ</a></li>
+                            <li><a href="/ProyectoMarketingDigital/promociones.html">Promociones</a></li>
+                            </ul>
+                        </li>
+            <li class ="submenu">
+                            <a>Clientes</a>
+                            <ul class="submenu-lista">
+                            <li><a href="/ProyectoMarketingDigital/usuario.html">Panel de Usuario</a></li>
+                            <li><a href="/ProyectoMarketingDigital/suscripcion.html">Suscripción</a></li>
+                            </ul>
+                        </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner-content">
+        <h1>¡Contáctanos!</h1>
+        <p>
+          Estamos listos para ayudarte a alcanzar tus objetivos de marketing
+          digital.
+        </p>
+      </div>
+    </section>
+
+    <div class="contenedor-cuerpo">
+        <main class="contenido-principal">
+    <section class="formulario-contacto">
+        <h2>Formluario</h2>
+        <form id="formActivo"> <input type="hidden" id="activoId" value=""> <div class="grupo-formulario">
+                <label for="nombreActivo">Nombre:</label>
+                <input type="text" id="nombreActivo" name="nombreActivo" required />
+            </div>
+            <div class="grupo-formulario">
+                <label for="tipoActivo">Tipo:</label>
+                <select id="tipoActivo" name="tipoActivo" required> <option value="">Selecciona un tipo</option>
+                    <option value="Servicio">Servicio</option>
+                    <option value="Producto">Producto</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="grupo-formulario">
+                <label for="descripcionActivo">Descripción:</label>
+                <textarea
+                    id="descripcionActivo"
+                    name="descripcionActivo"
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+            <button type="submit" class="boton-cta" id="btnGuardarActivo">Guardar Registro</button> <button type="button" class="boton-cta" id="btnLimpiarForm">Limpiar Formulario</button> </form>
+    </section>
+
+    <section class="gestion-activos">
+        <h2>Lista</h2>
+        <div class="controles-busqueda">
+            <input type="text" id="busquedaInput" placeholder="Buscar por nombre o descripción...">
+            <button id="btnBuscar" class="boton-cta">Buscar</button>
+            <button id="btnMostrarTodos" class="boton-cta">Mostrar Todos</button>
+        </div>
+        <div id="listaActivos" class="grid-activos">
+            <p>No hay activos registrados.</p>
+        </div>
+    </section>
+</main>
+        
+      <aside class="barra-lateral">
+        <section class="info-contacto">
+          <h3>Información de Contacto</h3>
+          <p><strong>Dirección:</strong> Tacna y Arica 160, Arequipa - Perú</p>
+          <p><strong>Teléfono:</strong> (054) 64 64 64</p>
+          <p><strong>Email:</strong> contacto@PLUMADIGITALmarketing.pe</p>
+        </section>
+        <section class="redes-sociales-contacto">
+          <h3>Síguenos en Redes Sociales</h3>
+          <div class="botones-sociales">
+            <a href="https://www.facebook.com/share/1CA5RFXaqT/?mibextid=wwXIfr" target="_blank" class="icono-social facebook"
+              >Facebook</a
+            >
+            <a href="https://www.instagram.com/valeriajudith615?igsh=bWVkODRxa292ZDI5&utm_source=qr" target="_blank" class="icono-social instagram"
+              >Instagram</a
+            >
+          </div>
+        </section>
+        <section class="mapa">
+          <h3>Ubicación</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.829938473479!2d-77.0354850857773!3d-12.06535109346749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c819a5e53f%3A0x2c7a3b7b9e8b8b8b!2sAM%20DIGITAL%20MARKETING%20-%20Agencia%20de%20Marketing%20Digital!5e0!3m2!1ses-419!2spe!4v1630000000000!5m2!1ses-419!2spe"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <div class="grid-pie">
+          <div class="col-footer info-pie">
+            <h4>Visítanos</h4>
+            <p>Tacna y Arica 160,<br />Arequipa - Perú</p>
+            <div class="redes-sociales">
+              <a href="#">Fb.</a>
+              <a href="#">Ig.</a>
+            </div>
+          </div>
+          <div class="col-footer contacto-pie">
+            <h4>Hablemos</h4>
+            <p>+51 999 999 999<br />(054) 64 64 64</p>
+            <a href="mailto:contacto@PLUMADIGITALmarketing.pe"
+              >contacto@PLUMADIGITALmarketing.pe</a
+            >
+          </div>
+          <div class="col-footer politicas-pie ultima-columna">
+            <h4>Política y Ética</h4>
+            <ul>
+              <li><a href="#">Política de Calidad</a></li>
+              <li><a href="#">Política Antisoborno</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-inferior">
+          <p>© 2025 PLUMADIGITAL - Agencia de Marketing Digital en Arequipa</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/gestionActivos.js"></script>
+  </body>
+</html>

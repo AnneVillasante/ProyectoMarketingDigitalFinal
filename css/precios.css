@@ -1,0 +1,155 @@
+/* Estilos para la sección de precios */
+.seccion-precios {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.seccion-precios h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.descripcion-precios {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tabla comparativa */
+.tabla-comparativa {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+}
+
+.tabla-comparativa table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.tabla-comparativa th {
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.tabla-comparativa th:first-child {
+    text-align: left;
+}
+
+.tabla-comparativa td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.tabla-comparativa th.destacado {
+    background: #00E5BE;
+    color: white;
+}
+
+.tabla-comparativa th.destacado .precio {
+    color: white;
+}
+
+.tabla-comparativa th.destacado .periodo {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tabla-comparativa td.destacado {
+    background: #f0fffc;
+}
+
+/* Precios en la tabla */
+.tabla-comparativa .precio {
+    font-size: 2rem;
+    color: #00E5BE;
+    font-weight: bold;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.tabla-comparativa .periodo {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Estados de características */
+.tabla-comparativa .habilitado {
+    color: #333;
+}
+
+.tabla-comparativa .deshabilitado {
+    color: #999;
+}
+
+/* Botón en la tabla */
+.tabla-comparativa .fila-boton td {
+    padding: 1.5rem;
+    border-top: 2px solid #eee;
+}
+
+.tabla-comparativa .boton-plan {
+    display: inline-block;
+    background: #00E5BE;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tabla-comparativa .boton-plan:hover {
+    background: #00c4a7;
+}
+
+/* Notas de precios */
+.nota-precios {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+.nota-precios p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tabla-comparativa {
+        margin: 0 -1rem;
+    }
+
+    .tabla-comparativa table {
+        font-size: 0.9rem;
+    }
+
+    .tabla-comparativa th,
+    .tabla-comparativa td {
+        padding: 1rem;
+    }
+
+    .tabla-comparativa .precio {
+        font-size: 1.5rem;
+    }
+
+    .seccion-precios h1 {
+        font-size: 2rem;
+    }
+} 

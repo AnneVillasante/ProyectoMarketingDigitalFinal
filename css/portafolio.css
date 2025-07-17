@@ -1,0 +1,252 @@
+/* Estilos base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contenido-principal {
+  padding-top: 120px;
+  background-color: #fff;
+}
+
+/* Banner de Inicio */
+.banner {
+  background: linear-gradient(135deg, #00E5BE, #0066FF);
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+  padding-top: 180px;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Secciones del Portafolio */
+.seccion-portafolio {
+  padding: 4rem 2rem;
+  scroll-margin-top: 90px;
+}
+
+.seccion-portafolio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.seccion-portafolio h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #00E5BE;
+  margin: 1rem auto;
+}
+
+/* Grid de Proyectos */
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de Proyecto */
+.proyecto {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.proyecto:hover img {
+  transform: scale(1.05);
+}
+
+.proyecto-info {
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.9), #fff);
+}
+
+.proyecto-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.proyecto-info p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones */
+.boton-ver {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #00E5BE;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton-ver:hover {
+  background: #00c4a3;
+}
+
+/* Estilos específicos por sección */
+#web .proyecto {
+  border-top: 4px solid #00E5BE;
+}
+
+#branding .proyecto {
+  border-top: 4px solid #0066FF;
+}
+
+#social .proyecto {
+  border-top: 4px solid #FF6B6B;
+}
+
+#video .proyecto {
+  border-top: 4px solid #4ECDC4;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seccion-portafolio {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Submenú */
+.submenu-lista {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submenu-lista li a {
+  color: #666;
+  transition: color 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  display: block;
+}
+
+.submenu-lista li a:hover {
+  color: #00E5BE;
+  background: rgba(0, 229, 190, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .seccion-portafolio h2 {
+    font-size: 2rem;
+  }
+
+  .proyecto img {
+    height: 200px;
+  }
+
+  .banner {
+    padding-top: 150px;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .video-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-portafolio {
+    padding: 3rem 1rem;
+  }
+
+  .banner {
+    padding-top: 120px;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .video-container {
+    height: 180px;
+  }
+}
+
+/* Contenedor de Video */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+

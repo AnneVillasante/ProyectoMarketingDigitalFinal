@@ -1,0 +1,303 @@
+/* Estilos específicos para la página de newsletter */
+.contenido-principal {
+    padding: 130px 0 60px;
+}
+
+.seccion-newsletter {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-seccion {
+    color: #0066FF;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contenedor-formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.formulario-newsletter {
+    display: grid;
+    gap: 25px;
+    text-align: left;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-formulario label {
+    font-weight: 500;
+    color: #555;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+    border-color: #00E5BE;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 229, 190, 0.2);
+}
+
+.grupo-checkbox {
+    display: grid;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.grupo-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.grupo-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #00E5BE;
+}
+
+.mensaje-error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    height: 18px;
+}
+
+.boton-suscribir {
+    background: linear-gradient(135deg, #00E5BE, #0066FF);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.boton-suscribir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 229, 190, 0.3);
+}
+
+.resultado-suscripcion {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #00E5BE;
+    display: none;
+}
+
+.resultado-suscripcion h3 {
+    color: #0066FF;
+    margin-bottom: 15px;
+}
+
+.resultado-suscripcion p {
+    margin-bottom: 10px;
+}
+
+.resultado-suscripcion ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Estilos para el CTA de servicios */
+.cta-servicios {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #0066FF, #00E5BE);
+    color: white;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.cta-servicios h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.cta-servicios p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.boton-cta {
+    display: inline-block;
+    background: white;
+    color: #0066FF;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para el botón de estadísticas */
+.boton-estadisticas {
+    display: block;
+    margin: 40px auto 0;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-estadisticas:hover {
+    background: #555;
+}
+
+/* Estilos para la ventana de estadísticas */
+.ventana-estadisticas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.ventana-estadisticas.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenido-ventana {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s;
+}
+
+.ventana-estadisticas.activo .contenido-ventana {
+    transform: translateY(0);
+}
+
+.cerrar-ventana {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s;
+}
+
+.cerrar-ventana:hover {
+    color: #e74c3c;
+}
+
+#contenido-estadisticas {
+    margin-top: 20px;
+}
+
+/* Estilos para las estadísticas */
+.estadistica {
+    margin-bottom: 30px;
+}
+
+.estadistica h3 {
+    color: #0066FF;
+    margin-bottom: 15px;
+}
+
+.grafico-barras {
+    margin-top: 15px;
+}
+
+.barra-container {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-etiqueta {
+    width: 120px;
+    font-weight: 500;
+}
+
+.barra {
+    height: 30px;
+    background: linear-gradient(90deg, #00E5BE, #0066FF);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    transition: width 0.5s ease;
+}
+
+.barra-valor {
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+    
+    .contenedor-formulario {
+        padding: 20px;
+    }
+    
+    .cta-servicios h3 {
+        font-size: 1.5rem;
+    }
+}

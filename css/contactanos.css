@@ -1,0 +1,318 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Banner */
+.banner {
+    color: #fff;
+    text-align: center;
+    background-image: url('../imagenes/008-contactanos/banner.png');
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+/* Contenedor Principal */
+.contenedor-cuerpo {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.contenido-principal {
+    flex: 70%;
+    padding-right: 2rem;
+}
+
+.barra-lateral {
+    flex: 30%;
+    padding-left: 2rem;
+}
+
+/* Formulario de Contacto */
+.formulario-contacto {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.formulario-contacto h2 {
+    color: #004aad;
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario {
+    margin-bottom: 1rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea,
+.grupo-formulario select { /* AÑADIDO SELECT */
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.grupo-formulario textarea {
+    resize: vertical;
+}
+
+.boton-cta {
+    background-color: #ffc107;
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Información de Contacto */
+.info-contacto {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.info-contacto h3 {
+    color: #004aad;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.info-contacto p {
+    margin-bottom: 0.75rem;
+}
+
+/* Redes Sociales */
+.redes-sociales-contacto {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.redes-sociales-contacto h3 {
+    color: #004aad;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.botones-sociales a {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+.botones-sociales a.facebook {
+    background-color: #1877f2;
+}
+
+.botones-sociales a.instagram {
+    background-color: #c13584;
+}
+
+.botones-sociales a.linkedin {
+    background-color: #0077b5;
+}
+
+/* Mapa */
+.mapa {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.mapa h3 {
+    color: #004aad;
+    padding: 1.5rem;
+    margin-bottom: 0;
+}
+
+.mapa iframe {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .contenedor-cuerpo {
+        flex-direction: column;
+    }
+
+    .contenido-principal,
+    .barra-lateral {
+        flex: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .barra-lateral {
+        margin-top: 2rem;
+    }
+
+/* Nueva Sección de Gestión de Activos */
+.gestion-activos {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem; /* Añadido margen superior */
+}
+
+.gestion-activos h2 {
+    color: #004aad;
+    margin-bottom: 1.5rem;
+}
+
+.controles-busqueda {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controles-busqueda input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Grid para mostrar activos */
+.grid-activos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.activo-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* Asegura un tamaño mínimo */
+}
+
+.activo-item h3 {
+    color: #0066FF;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.activo-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.activo-item .tipo {
+    font-weight: bold;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.activo-item .acciones {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.activo-item .acciones button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.activo-item .acciones .btn-editar {
+    background-color: #ffc107; /* Amarillo */
+    color: #333;
+}
+
+.activo-item .acciones .btn-editar:hover {
+    background-color: #e0a800;
+}
+
+.activo-item .acciones .btn-eliminar {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.activo-item .acciones .btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+/* ... (otras secciones CSS existentes) ... */
+
+/* Ajustes responsivos para los nuevos elementos */
+@media (max-width: 960px) {
+    /* ... (reglas responsivas existentes) ... */
+
+    .controles-busqueda {
+        flex-direction: column;
+    }
+    .controles-busqueda input,
+    .controles-busqueda .boton-cta {
+        width: 100%;
+        margin-right: 0;
+    }
+    .boton-cta {
+        margin-right: 0;
+        margin-bottom: 10px; /* Añadido para espaciar botones apilados */
+    }
+}    
+}

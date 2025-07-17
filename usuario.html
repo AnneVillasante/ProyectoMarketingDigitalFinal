@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/usuario.css">
+        <title>Panel de Usuario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <marquee behavior="scroll" direction="left" scrollamount="6" bgcolor="#00E5BE" style="color: white; padding: 10px 0; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+          🚀 Transformamos tu presencia digital | 💡 Estrategias innovadoras | 📱 Marketing que genera resultados | ⭐ Expertos en redes sociales | 🎯 Soluciones personalizadas | 💼 Potenciamos tu marca | 📈 Crecimiento garantizado | 🌟 Tu éxito es nuestra prioridad
+        </marquee>
+        <header class="encabezado">
+            <div class="contenedor">
+                <div class="logo">
+                    <a href="/ProyectoMarketingDigital/">
+                    <img
+                      src="imagenes/logo2.svg"
+                      alt="AM Digital - Agencia de Marketing"
+                    />
+                    </a>
+                </div>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+                <nav class="navegacion">
+                    <ul>
+                        <li><a href="/ProyectoMarketingDigital/">Inicio</a></li>
+                        <li><a href="/ProyectoMarketingDigital/nosotros.html">Nosotros</a></li>
+                        <li><a href="/ProyectoMarketingDigital/equipo.html">Equipo</a></li>
+                        <li><a href="/ProyectoMarketingDigital/soluciones.html">Soluciones</a></li>
+                        <li><a href="/ProyectoMarketingDigital/disenoweb.html">Diseño Web</a></li>
+                        <li><a href="/ProyectoMarketingDigital/precios.html">Precios</a></li>
+                        <li class="submenu">
+                          <a href="/ProyectoMarketingDigital/portafolio.html">Portafolio</a>
+                          <ul class="submenu-lista">
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#web">Web</a></li>
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#branding">Branding</a></li>
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#social">Social Media</a></li>
+                            <li><a href="/ProyectoMarketingDigital/portafolio.html#video">Video</a></li>
+                          </ul>
+                        </li>
+                        <li class ="submenu">
+                                        <a>Contacto</a>
+                                        <ul class="submenu-lista">
+                                        <li><a href="/ProyectoMarketingDigital/contactanos.html">Contáctanos</a></li>
+                                        <li><a href="/ProyectoMarketingDigital/faq.html">FAQ</a></li>
+                                        <li><a href="/ProyectoMarketingDigital/promociones.html">Promociones</a></li>
+                                        </ul>
+                                    </li>
+                        <li class ="submenu">
+                                        <a>Clientes</a>
+                                        <ul class="submenu-lista">
+                                        <li><a href="/ProyectoMarketingDigital/usuario.html">Panel de Usuario</a></li>
+                                        <li><a href="/ProyectoMarketingDigital/suscripcion.html">Suscripción</a></li>
+                                        </ul>
+                                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <main class="contenido-principal">
+        <div class="panel-cliente">
+            <!-- Login del administrador -->
+            <div id="area-login" class="estado-panel">
+                <h2>Panel de Gestión Privado</h2>
+                <p>Ingresa tus credenciales para gestionar las suscripciones.</p>
+                <form id="form-login" style="max-width: 400px; margin: 2rem auto 0;">
+                    <div class="form-group">
+                        <label for="admin-user">Usuario:</label>
+                        <input type="text" id="admin-user" placeholder="admin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-pass">Contraseña:</label>
+                        <input type="password" id="admin-pass" placeholder="******" required>
+                    </div>
+                    <button type="submit" class="btn btn-primario">Iniciar sesión</button>
+                </form>
+            </div>
+
+            <!-- Panel privado (inicialmente oculto) -->
+            <div id="area-panel" class="estado-panel" style="display:none;">
+                <h2>Bienvenido, administrador</h2>
+                <p>Gestiona las suscripciones recibidas desde el formulario.</p>
+                <div class="acciones-panel">
+                    <button id="btn-ver-suscripciones" class="btn btn-primario">Ver suscripciones</button>
+                    <button id="btn-cerrar-sesion" class="btn btn-secundario">Cerrar sesión</button>
+                </div>
+
+                <!-- Contenedor de resultados -->
+                <div id="panel-suscripciones" class="tabla-contenedor" style="display:none;">
+                    <input type="text" id="input-buscar" placeholder="Buscar por nombre o país" style="margin: 20px 0; padding: 10px; width: 100%; max-width: 400px;">
+                    <button onclick="buscarSuscripcion()" class="btn btn-secundario">Buscar</button>
+                    <div id="contenedor-suscriptores" style="margin-top: 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <footer class="pie-pagina">
+            <div class="contenedor">
+                <div class="grid-pie">
+                    <div class="col-footer info-pie">
+                        <h4>Visítanos</h4>
+                        <p> Tacna y Arica 160,<br>Arequipa - Perú</p>
+                        <div class="redes-sociales">
+                            <a href="#">Fb.</a>
+                            <a href="#">Ig.</a>
+                        </div>
+                    </div>
+                    <div class="col-footer contacto-pie">
+                        <h4>Hablemos</h4>
+                        <p>+51 999 999 999<br>(054) 64 64 64</p>
+                        <a href="mailto:contacto@PLUMADIGITALmarketing.pe">contacto@PLUMADIGITALmarketing.pe</a>
+                    </div>
+                    <div class="col-footer politicas-pie ultima-columna">
+                        <h4>Política y Ética</h4>
+                        <ul>
+                            <li><a href="#">Política de Calidad</a></li>
+                            <li><a href="#">Política Antisoborno</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pie-inferior">
+                    <p>© 2025 PLUMADIGITAL - Agencia de Marketing Digital en Arequipa</p>
+                </div>
+            </div>
+        </footer>
+    <script src="/ProyectoMarketingDigital/js/suscripcion.js"></script>
+    <script src="js/usuario.js"></script>
+    </body>
+</html>
